@@ -1,0 +1,31 @@
+Three stages: Working directory, Staging Area, .git directory (Repository). To add files to the staging area:
+git add -A		Add all files to staging area
+git add .gitignore	Add specific file to staging area
+
+git reset .gitignore Revert specific file from staging area
+git reset		Revert all
+
+git commit -m “MESSAGE”	Commit with a specific message
+
+git log		Shows the commit log
+
+
+2) Create a remote project in Unity
+git remote add origin “https://github.com/luiseduve/$repo_name.git”
+
+Clone remote project that you want to start developing in.
+git clone <url> <where_to_clone>
+git clone ../remote_repo .	Clone in the current directory
+
+View information about remote repository
+git remote -v	Information of the repository 
+git branch -a	Branches in the repo locally and remotely
+
+When making changes, it is necessary to make pull and then push, to get up-to-date repo
+git pull origin <branch>
+git push origin <branch>
+
+Common workflow is to create branches instead of working on the MASTER branch
+git branch <branchname>		Create branch
+git branch				List existing branch
+git checkout <branchname>		Work on that branch
